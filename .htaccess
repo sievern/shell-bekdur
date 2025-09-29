@@ -1,6 +1,7 @@
-RewriteEngine On
-RewriteRule ^index\.php$ homepage [L]
-
-#http to https
-RewriteCond %{HTTPS} off
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^api/v1(.*)$ /index.php/api/v1$1 [L,R=307]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ /index.php/$1 [QSA,L]
+</IfModule>
