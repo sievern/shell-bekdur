@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteRule ^index\.php$ homepage [L]
+
+#http to https
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
